@@ -93,5 +93,4 @@ npm test           # Unit tests (if configured)
 * **Vercel / Netlify**: set `environment.api` to deployed API URL.
 * Ensure API sets `secure: true` cookies in production (done automatically when `NODE_ENV=production`).
 
-````
 
