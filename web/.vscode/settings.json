@@ -1,0 +1,30 @@
+{
+  // Run Prettier+ESLint as the default formatter (this extension)
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+
+  // Also set language-specific defaults so nothing overrides it
+  "[typescript]": { "editor.defaultFormatter": "rvest.vs-code-prettier-eslint" },
+  "[typescriptreact]": { "editor.defaultFormatter": "rvest.vs-code-prettier-eslint" },
+  "[javascript]": { "editor.defaultFormatter": "rvest.vs-code-prettier-eslint" },
+  "[javascriptreact]": { "editor.defaultFormatter": "rvest.vs-code-prettier-eslint" },
+  "[html]": { "editor.defaultFormatter": "rvest.vs-code-prettier-eslint" },
+
+  // Format behavior
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": false,
+
+  // Tell VS Code to apply ESLint fixes on save (needs ESLint extension installed)
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+
+  // Nice-to-haves for whitespace cleanup
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // If you have the Prettier extension installed and it’s set to require a config,
+  // make sure there's a .prettierrc (we added one above). Otherwise, disable this:
+  // "prettier.requireConfig": false
+}
