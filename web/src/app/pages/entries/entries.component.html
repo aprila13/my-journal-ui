@@ -1,0 +1,83 @@
+  <!-- <div class="page">
+    <mat-card class="card new-entry">
+      <h2 class="title">Make a journal entry</h2>
+
+      <form [formGroup]="newForm" (ngSubmit)="create()">
+        <mat-form-field appearance="outline" class="w-full">
+          <mat-label>Title (optional)</mat-label>
+          <input matInput formControlName="title" maxlength="200" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="w-full">
+          <mat-label>Body</mat-label>
+          <textarea matInput rows="5" formControlName="body" required></textarea>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" [disabled]="newForm.invalid || creating()">
+          {{ creating() ? 'Saving…' : 'Save' }}
+        </button>
+      </form>
+    </mat-card>
+
+    <mat-divider class="spacer"></mat-divider>
+
+    <div class="loading" *ngIf="loading()"> <mat-spinner diameter="36"></mat-spinner> </div>
+
+    <div class="list" *ngIf="!loading()">
+      <ng-container *ngIf="entries().length; else emptyState">
+        <mat-card class="card entry" *ngFor="let e of entries(); trackBy: trackId">
+          <div class="entry-header">
+            <h3 class="entry-title" [title]="e.title || '(untitled)'">
+              {{ e.title || '(untitled)' }}
+            </h3>
+            <div class="entry-actions">
+              <button mat-icon-button aria-label="Edit" (click)="toggleEdit(e)">
+                <mat-icon>{{ editingId() === e.id ? 'close' : 'edit' }}</mat-icon>
+              </button>
+              <button mat-icon-button color="warn" aria-label="Delete" (click)="confirmDelete(e)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span>Created: {{ e.timeCreated | date:'MMM d, y, h:mm a' }}</span>
+            <span>•</span>
+            <span>Updated: {{ e.timeUpdated | date:'MMM d, y, h:mm a' }}</span>
+          </div>
+
+          <div *ngIf="editingId() !== e.id; else editForm">
+            <p class="body">{{ e.body }}</p>
+          </div>
+
+          <ng-template #editForm>
+            <form [formGroup]="editFormGroup" (ngSubmit)="saveEdit(e)">
+              <mat-form-field appearance="outline" class="w-full">
+                <mat-label>Title</mat-label>
+                <input matInput formControlName="title" maxlength="200" />
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" class="w-full">
+                <mat-label>Body</mat-label>
+                <textarea matInput rows="5" formControlName="body"></textarea>
+              </mat-form-field>
+
+              <div class="edit-actions">
+                <button mat-stroked-button type="button" (click)="toggleEdit(null)">Cancel</button>
+                <button mat-raised-button color="primary" [disabled]="editFormGroup.invalid || savingEdit()">
+                  {{ savingEdit() ? 'Saving…' : 'Save changes' }}
+                </button>
+              </div>
+            </form>
+          </ng-template>
+        </mat-card>
+      </ng-container>
+
+      <ng-template #emptyState>
+        <mat-card class="card empty">
+          <p>No entries yet. Create your first one above ✨</p>
+        </mat-card>
+      </ng-template>
+    </div>
+  </div>
+   -->

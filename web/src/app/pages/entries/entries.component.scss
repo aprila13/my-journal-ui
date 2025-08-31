@@ -1,0 +1,13 @@
+    .page { max-width: 880px; margin: 24px auto; padding: 0 16px; }
+    .card { margin-bottom: 16px; }
+    .w-full { width: 100%; }
+    .spacer { margin: 16px 0 24px; }
+    .loading { display:flex; justify-content:center; padding:24px; }
+    .entry-header { display:flex; align-items:center; justify-content:space-between; gap: 8px; }
+    .entry-actions { display:flex; gap:6px; }
+    .entry-title { margin: 0; font-weight: 600; }
+    .meta { color:#666; display:flex; gap:8px; font-size: 12px; margin: 6px 0 10px; }
+    .body { white-space: pre-wrap; line-height: 1.5; }
+    .edit-actions { display:flex; gap: 8px; justify-content:flex-end; }
+    .empty { text-align:center; color:#666; }
+  
